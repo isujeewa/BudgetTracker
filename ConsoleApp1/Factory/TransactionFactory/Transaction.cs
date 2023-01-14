@@ -1,45 +1,17 @@
-﻿using ExpenseTrackingApp.Models;
+﻿using ExpenseTrackingApp.Factory;
+using ExpenseTrackingApp.Models;
 using System.Xml.Linq;
 
 namespace ConsoleApp1.Factory.TRFactory
 {
     // abstract transaction 
-    public abstract class Transaction
+    public abstract class Transaction : Item
     {
-        private string id;
-        private ICategory category;
-        private double amount;
         private DateTime date;
-        private string note;
         private User user;
 
 
 
-        public string ID
-        {
-
-            get { return id; }   // get method
-            set { id = value; }  // set method
-        }
-        public ICategory Category
-        {
-
-            get { return category; }   // get method
-            set { category = value; }  // set method
-        }
-        public string Note
-        {
-
-            get { return note; }   // get method
-            set { note = value; }  // set method
-        }
-
-        public double Amount
-        {
-
-            get { return amount; }   // get method
-            set { amount = value; }  // set method
-        }
 
         public DateTime Date
         {

@@ -4,8 +4,10 @@
 using ConsoleApp1.Factory.BudgetFactory;
 using ConsoleApp1.Factory.TRFactory;
 using ConsoleApp1.Util;
+using ExpenseTrackingApp.Factory;
 using ExpenseTrackingApp.Factory.Concretes.IncomeCategories;
 using ExpenseTrackingApp.Models;
+using ExpenseTrackingApp.Reports;
 using System.Linq.Expressions;
 
 
@@ -15,6 +17,7 @@ logger.log("Creating user....");
 User user = new User(Guid.NewGuid().ToString(),"Sujeewa", "@#$$11", true);
 
 logger.log("Creating categories....");
+
 
 //Categories 
 ICategory salary = new IncomeCategory("001", "Salary");
@@ -76,6 +79,15 @@ foreach (TransactionTypeCreator tc in transactionTypes)
 
     }
 }
+
+
+BudgetReport r = new BudgetReport();
+r.incomeItems = transactionTypes[1].Transactions.Cast<Item>().ToList();
+r.expensetems = transactionTypes[0].Transactions.Cast<Item>().ToList();
+r.budgetExpensetems = budgetTypeCreator[1].BudgetItems.Cast<Item>().ToList();
+r.budgetIncomeItems = budgetTypeCreator[0].BudgetItems.Cast<Item>().ToList();
+
+r.Print();
 
 logger.log("Application successfully executed....");
 
