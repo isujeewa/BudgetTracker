@@ -3,9 +3,14 @@
 
 using ConsoleApp1.Factory.BudgetFactory;
 using ConsoleApp1.Factory.TRFactory;
+using ConsoleApp1.Util;
 using ExpenseTrackingApp.Factory.Concretes.IncomeCategories;
 using ExpenseTrackingApp.Models;
 using System.Linq.Expressions;
+
+
+Logger logger = new Logger();
+
 
 
 //Categories 
