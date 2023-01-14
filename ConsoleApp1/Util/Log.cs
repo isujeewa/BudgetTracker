@@ -10,6 +10,10 @@ namespace ConsoleApp1.Util
     {
         private static  Logger logger = new Logger();
 
+        private Logger()
+        {
+
+        }
       
        public static Logger GetLogger()
         {

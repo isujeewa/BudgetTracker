@@ -9,9 +9,9 @@ using ExpenseTrackingApp.Models;
 using System.Linq.Expressions;
 
 
-Logger logger = new Logger();
+Logger logger = Logger.GetLogger();
 
-
+logger.log("Creating categories....");
 
 //Categories 
 ICategory salary = new IncomeCategory("001", "Salary");
@@ -22,6 +22,7 @@ ICategory  petral = new ExpenseCategory("001", "Petorl");
 ICategory meal = new ExpenseCategory("002", "Meal");
 ICategory travel = new ExpenseCategory("003", "Traval");
 
+logger.log("Creating budget....");
 
 BudgetTypeCreator[] budgetTypeCreator = new BudgetTypeCreator[2];
 
@@ -47,7 +48,7 @@ foreach (BudgetTypeCreator tc in budgetTypeCreator)
     }
 }
 
-
+logger.log("adding tranactions...");
 
 Console.WriteLine("actualk ------------------");
 TransactionTypeCreator[]  transactionTypes = new TransactionTypeCreator[2];
@@ -73,6 +74,7 @@ foreach (TransactionTypeCreator tc in transactionTypes)
     }
 }
 
+logger.log("Application successfully executed....");
 
 
 
