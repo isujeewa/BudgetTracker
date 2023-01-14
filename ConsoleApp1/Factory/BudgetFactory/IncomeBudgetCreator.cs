@@ -10,7 +10,7 @@ namespace ConsoleApp1.Factory.BudgetFactory
 {
     internal class IncomeBudgetCreator : BudgetTypeCreator
     {
-        public IncomeBudgetCreator(  string name, DateTime startDate, DateTime endDate) : base(  name, startDate, endDate)
+        public IncomeBudgetCreator(  string name, DateTime startDate, DateTime endDate, User user) : base(  name, startDate, endDate,user)
         {
         }
 

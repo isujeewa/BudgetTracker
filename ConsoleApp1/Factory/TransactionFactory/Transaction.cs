@@ -11,6 +11,9 @@ namespace ConsoleApp1.Factory.TRFactory
         private double amount;
         private DateTime date;
         private string note;
+        private User user;
+
+
 
         public string ID
         {
@@ -43,6 +46,13 @@ namespace ConsoleApp1.Factory.TRFactory
 
             get { return date; }   // get method
             set { date = value; }  // set method
+        }
+
+        public User User
+        {
+
+            get { return user; }   // get method
+            set { user = value; }  // set method
         }
     }
 }

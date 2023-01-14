@@ -9,7 +9,7 @@ namespace ConsoleApp1.Factory.BudgetFactory
 {
     public class ExpenseBudgetCreator : BudgetTypeCreator
     {
-        public ExpenseBudgetCreator(  string name, DateTime startDate, DateTime endDate) : base(  name, startDate, endDate)
+        public ExpenseBudgetCreator(  string name, DateTime startDate, DateTime endDate,User user) : base(  name, startDate, endDate,user)
         {
         }
 

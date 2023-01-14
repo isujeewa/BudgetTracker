@@ -16,6 +16,6 @@ namespace ConsoleApp1.Factory.TRFactory
 
         public List<Transaction> Transactions { get { return transactions; } }
 
-        public abstract void CreateTransaction(string note, double value , ICategory category, DateTime td );
+        public abstract void CreateTransaction(string note, double value , ICategory category, DateTime td  , User user);
     }
 }

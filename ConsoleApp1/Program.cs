@@ -10,6 +10,9 @@ using System.Linq.Expressions;
 
 
 Logger logger = Logger.GetLogger();
+logger.log("Creating user....");
+
+User user = new User(Guid.NewGuid().ToString(),"Sujeewa", "@#$$11", true);
 
 logger.log("Creating categories....");
 
@@ -26,8 +29,8 @@ logger.log("Creating budget....");
 
 BudgetTypeCreator[] budgetTypeCreator = new BudgetTypeCreator[2];
 
-budgetTypeCreator[0] = new ExpenseBudgetCreator("Month of Jan", new DateTime(2023, 01, 01), new DateTime(2023, 01, 31));
-budgetTypeCreator[1] = new IncomeBudgetCreator("Month of Jan", new DateTime(2023, 01, 01), new DateTime(2023, 01, 31));
+budgetTypeCreator[0] = new ExpenseBudgetCreator("Month of Jan", new DateTime(2023, 01, 01), new DateTime(2023, 01, 31) , user);
+budgetTypeCreator[1] = new IncomeBudgetCreator("Month of Jan", new DateTime(2023, 01, 01), new DateTime(2023, 01, 31), user);
 
 budgetTypeCreator[0].CreateBudgetItem("petrol", 500, petral, DateTime.Now);
 budgetTypeCreator[0].CreateBudgetItem("meal", 500, meal, DateTime.Now);
@@ -56,11 +59,11 @@ TransactionTypeCreator[]  transactionTypes = new TransactionTypeCreator[2];
 transactionTypes[0] = new ExpenseCreator();
 transactionTypes[1] = new IncomeCreator();
 
-transactionTypes[0].CreateTransaction("petrol", 500 , petral,   DateTime.Now);
-transactionTypes[0].CreateTransaction("meal", 500, meal, DateTime.Now);
+transactionTypes[0].CreateTransaction("petrol", 500 , petral,   DateTime.Now ,user);
+transactionTypes[0].CreateTransaction("meal", 500, meal, DateTime.Now ,user);
 
-transactionTypes[1].CreateTransaction("JAN", 10000, salary, DateTime.Now);
-transactionTypes[1].CreateTransaction("Rent", 1500, rent, DateTime.Now);
+transactionTypes[1].CreateTransaction("JAN", 10000, salary, DateTime.Now, user);
+transactionTypes[1].CreateTransaction("Rent", 1500, rent, DateTime.Now, user);
 
 
 foreach (TransactionTypeCreator tc in transactionTypes)
@@ -69,7 +72,7 @@ foreach (TransactionTypeCreator tc in transactionTypes)
     foreach( Transaction t in tc.Transactions)
     {
         Console.WriteLine(t.Note +" "+ t.Amount);
-        Console.WriteLine(t.Category.Name +" "+ t.Category.CategoryType.ToString());
+        Console.WriteLine(t.Category.Name +" "+ t.Category.CategoryType.ToString() + " " + t.User.name);
 
     }
 }

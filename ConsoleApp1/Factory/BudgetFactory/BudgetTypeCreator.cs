@@ -16,13 +16,16 @@ namespace ConsoleApp1.Factory.BudgetFactory
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
 
+        public User User { get; set; }
 
-        public BudgetTypeCreator(  string name, DateTime startDate, DateTime endDate)
+
+        public BudgetTypeCreator(  string name, DateTime startDate, DateTime endDate, User user)
         {
             ID = Guid.NewGuid().ToString();
             Name = name;
             StartDate = startDate;
             EndDate = endDate;
+            User = user;
         }
 
         public List<Budget> BudgetItems { get { return budgetItems; } }

@@ -3,16 +3,17 @@
     public class User
     {
         //id of the user
-        private int id;
+        public string id { get; set; }
         //name of the user
-        private string name;
-        //password of the user
-        private string pwd;
+        public string name { get; set; }
+        //password of the user { get; set; }
         //determine whether user is active or not 
-        private bool active;
+        public bool active { get; set; }
+        public string pwd { get; set; }
+
 
         //User constructor 
-        public User(int id, string name , string pwd, bool active) {
+        public User(string id, string name , string pwd, bool active) {
             this.id = id;
             this.name = name;
             this.pwd = pwd;
