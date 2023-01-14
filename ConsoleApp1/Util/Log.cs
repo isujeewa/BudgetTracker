@@ -10,7 +10,7 @@ namespace ConsoleApp1.Util
     {
         private static  Logger logger = new Logger();
 
-       private class
+      
        public static Logger GetLogger()
         {
             if (logger == null)
