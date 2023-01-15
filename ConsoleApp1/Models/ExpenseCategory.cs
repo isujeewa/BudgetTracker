@@ -2,7 +2,7 @@
 
 namespace ExpenseTrackingApp.Models
 {
-    public class ExpenseCategory : ICategory
+    public class ExpenseCategory : Category
     {
         public ExpenseCategory()
         {

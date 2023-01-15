@@ -3,7 +3,7 @@ using System.Transactions;
 
 namespace ExpenseTrackingApp.Factory.Concretes.IncomeCategories
 {
-    public class IncomeCategory : ICategory
+    public class IncomeCategory : Category
     {
         public IncomeCategory(string id , string name  )
         {

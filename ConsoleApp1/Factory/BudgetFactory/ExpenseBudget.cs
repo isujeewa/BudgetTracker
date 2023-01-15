@@ -10,6 +10,6 @@ namespace ConsoleApp1.Factory.BudgetFactory
 {
     public class ExpenseBudget : Budget
     {
-        public ExpenseBudget(ICategory c, DateTime dt, string note, double amt) { Category = c;   Note = note; ID = Guid.NewGuid().ToString(); Amount = amt; }
+        public ExpenseBudget(Category c, DateTime dt, string note, double amt) { Category = c;   Note = note; ID = Guid.NewGuid().ToString(); Amount = amt; }
     }
 }

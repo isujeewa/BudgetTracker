@@ -10,7 +10,7 @@ namespace ExpenseTrackingApp.Factory
     public abstract class Item
     {
         public string ID { get; set; }
-        public ICategory Category { get; set; }
+        public Category Category { get; set; }
 
         public double Amount { get; set; }
 

@@ -30,6 +30,6 @@ namespace ConsoleApp1.Factory.BudgetFactory
 
         public List<Budget> BudgetItems { get { return budgetItems; } }
 
-        public abstract void CreateBudgetItem(string note, double value, ICategory category, DateTime td);
+        public abstract void CreateBudgetItem(string note, double value, Category category, DateTime td);
     }
 }

@@ -14,7 +14,7 @@ namespace ConsoleApp1.Factory.BudgetFactory
         {
         }
 
-        public override void CreateBudgetItem(string note, double value, ICategory category, DateTime td)
+        public override void CreateBudgetItem(string note, double value, Category category, DateTime td)
         {
             BudgetItems.Add(new IncomeBudget(category, td, note, value));
         }

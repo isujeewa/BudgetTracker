@@ -7,7 +7,7 @@ namespace ConsoleApp1.Factory.TRFactory
     {
 
 
-        public override void CreateTransaction(string note, double value, ICategory category, DateTime td ,User user )
+        public override void CreateTransaction(string note, double value, Category category, DateTime td ,User user )
         {
             Transactions.Add(new Expense(category,td, note,value,user));
         }

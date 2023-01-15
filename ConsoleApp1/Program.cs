@@ -20,13 +20,13 @@ logger.log("Creating categories....");
 
 
 //Categories 
-ICategory salary = new IncomeCategory("001", "Salary");
-ICategory rent = new IncomeCategory("002", "Rent");
-ICategory other = new IncomeCategory("003", "Other");
+Category salary = new IncomeCategory("001", "Salary");
+Category rent = new IncomeCategory("002", "Rent");
+Category other = new IncomeCategory("003", "Other");
 
-ICategory  petral = new ExpenseCategory("001", "Petorl");
-ICategory meal = new ExpenseCategory("002", "Meal");
-ICategory travel = new ExpenseCategory("003", "Traval");
+Category  petral = new ExpenseCategory("001", "Petorl");
+Category meal = new ExpenseCategory("002", "Meal");
+Category travel = new ExpenseCategory("003", "Traval");
 
 logger.log("Creating budget....");
 

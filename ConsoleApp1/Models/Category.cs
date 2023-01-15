@@ -2,7 +2,7 @@
 
 namespace ExpenseTrackingApp.Models
 {
-    public abstract class ICategory
+    public abstract class Category
     {
         private string id;
         private string name;
