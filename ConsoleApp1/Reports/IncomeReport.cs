@@ -9,9 +9,9 @@ namespace ExpenseTrackingApp.Reports
 {
     internal class IncomeReport : ReportStrategy
     {
+        //Concreate stratergy 
         public override void Print()
         {
-         
            foreach (var item in incomeItems)
             {
                Console.WriteLine(item.Category.Name +"-"+ item.Amount);

@@ -10,19 +10,14 @@ namespace ConsoleApp1.Factory.TRFactory
         private DateTime date;
         private bool isRecurrent;
 
-
-
-
         public DateTime Date
         {
-
             get { return date; }   // get method
             set { date = value; }  // set method
         }
 
         public bool IsRecurrent
         {
-
             get { return isRecurrent; }   // get method
             set { isRecurrent = value; }  // set method
         }
