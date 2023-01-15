@@ -79,10 +79,10 @@ foreach (TransactionTypeCreator tc in transactionTypes)
 
     }
 }
-
+logger.log("printing reports");
 ReportContext reportContext;
 
-reportContext = new ReportContext(new BudgetReport(),
+reportContext = new ReportContext(new ExpenseReport(),
      transactionTypes[1].Transactions.Cast<Item>().ToList(),
      transactionTypes[0].Transactions.Cast<Item>().ToList(),
      budgetTypeCreator[1].BudgetItems.Cast<Item>().ToList(),
