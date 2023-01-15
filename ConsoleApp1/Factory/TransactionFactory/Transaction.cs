@@ -8,7 +8,7 @@ namespace ConsoleApp1.Factory.TRFactory
     public abstract class Transaction : Item
     {
         private DateTime date;
-    
+        private bool isRecurrent;
 
 
 
@@ -18,6 +18,13 @@ namespace ConsoleApp1.Factory.TRFactory
 
             get { return date; }   // get method
             set { date = value; }  // set method
+        }
+
+        public bool IsRecurrent
+        {
+
+            get { return isRecurrent; }   // get method
+            set { isRecurrent = value; }  // set method
         }
     }
 }

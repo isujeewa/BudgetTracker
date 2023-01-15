@@ -6,6 +6,6 @@ namespace ConsoleApp1.Factory.TRFactory
     //concrete product
     public class Income : Transaction
     {
-        public Income( Category c , DateTime dt , string note , double  amt, User user) { Category = c;  Date = dt; Note = note; ID = Guid.NewGuid().ToString(); Amount = amt; User = user;  }
+        public Income( Category c , DateTime dt , string note , double  amt, User user, bool isRecurrent) { Category = c;  Date = dt; Note = note; ID = Guid.NewGuid().ToString(); Amount = amt; User = user; IsRecurrent = isRecurrent; }
     }
 }

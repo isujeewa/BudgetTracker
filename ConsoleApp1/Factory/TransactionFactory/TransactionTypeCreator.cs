@@ -16,6 +16,6 @@ namespace ConsoleApp1.Factory.TRFactory
 
         public List<Transaction> Transactions { get { return transactions; } }
 
-        public abstract void CreateTransaction(string note, double value , Category category, DateTime td  , User user);
+        public abstract void CreateTransaction(string note, double value , Category category, DateTime td  , User user , bool isRecurrent);
     }
 }

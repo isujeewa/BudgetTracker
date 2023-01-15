@@ -62,11 +62,11 @@ TransactionTypeCreator[]  transactionTypes = new TransactionTypeCreator[2];
 transactionTypes[0] = new ExpenseCreator();
 transactionTypes[1] = new IncomeCreator();
 
-transactionTypes[0].CreateTransaction("petrol", 500 , petral,   DateTime.Now ,user);
-transactionTypes[0].CreateTransaction("meal", 500, meal, DateTime.Now ,user);
+transactionTypes[0].CreateTransaction("petrol", 500 , petral,   DateTime.Now ,user,false);
+transactionTypes[0].CreateTransaction("meal", 500, meal, DateTime.Now ,user,false);
 
-transactionTypes[1].CreateTransaction("JAN", 10000, salary, DateTime.Now, user);
-transactionTypes[1].CreateTransaction("Rent", 1500, rent, DateTime.Now, user);
+transactionTypes[1].CreateTransaction("JAN", 10000, salary, DateTime.Now, user,true);
+transactionTypes[1].CreateTransaction("Rent", 1500, rent, DateTime.Now, user,true);
 
 
 foreach (TransactionTypeCreator tc in transactionTypes)
