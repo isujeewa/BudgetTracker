@@ -80,14 +80,16 @@ foreach (TransactionTypeCreator tc in transactionTypes)
     }
 }
 
+ReportContext reportContext;
 
-BudgetReport r = new BudgetReport();
-r.incomeItems = transactionTypes[1].Transactions.Cast<Item>().ToList();
-r.expensetems = transactionTypes[0].Transactions.Cast<Item>().ToList();
-r.budgetExpensetems = budgetTypeCreator[1].BudgetItems.Cast<Item>().ToList();
-r.budgetIncomeItems = budgetTypeCreator[0].BudgetItems.Cast<Item>().ToList();
+reportContext = new ReportContext(new BudgetReport(),
+     transactionTypes[1].Transactions.Cast<Item>().ToList(),
+     transactionTypes[0].Transactions.Cast<Item>().ToList(),
+     budgetTypeCreator[1].BudgetItems.Cast<Item>().ToList(),
+     budgetTypeCreator[0].BudgetItems.Cast<Item>().ToList()
+    );
 
-r.Print();
+reportContext.Print();
 
 logger.log("Application successfully executed....");
 

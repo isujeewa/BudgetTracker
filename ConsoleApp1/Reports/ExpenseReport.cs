@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExpenseTrackingApp.Reports
 {
-    internal class ExpenseReport : Report
+    internal class ExpenseReport : ReportStrategy
     {
         public override void Print()
         {

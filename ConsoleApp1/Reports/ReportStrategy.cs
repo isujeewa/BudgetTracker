@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ExpenseTrackingApp.Reports
 {
-    internal abstract class Report
+    public abstract class ReportStrategy
     {
         public List<Item> incomeItems { get; set; }
         public List<Item> expensetems { get; set; }

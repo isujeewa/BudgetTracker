@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ExpenseTrackingApp.Reports
 {
-    internal class IncomeReport : Report
+    internal class IncomeReport : ReportStrategy
     {
         public override void Print()
         {
