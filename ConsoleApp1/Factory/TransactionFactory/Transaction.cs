@@ -8,7 +8,7 @@ namespace ConsoleApp1.Factory.TRFactory
     public abstract class Transaction : Item
     {
         private DateTime date;
-        private User user;
+    
 
 
 

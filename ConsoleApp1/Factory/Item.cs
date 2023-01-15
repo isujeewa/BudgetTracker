@@ -15,5 +15,6 @@ namespace ExpenseTrackingApp.Factory
         public double Amount { get; set; }
 
         public string Note { get; set; }
+        private User user;
     }
 }
