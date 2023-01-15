@@ -19,12 +19,5 @@ namespace ConsoleApp1.Factory.TRFactory
             get { return date; }   // get method
             set { date = value; }  // set method
         }
-
-        public User User
-        {
-
-            get { return user; }   // get method
-            set { user = value; }  // set method
-        }
     }
 }
